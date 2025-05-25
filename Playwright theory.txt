@@ -1,0 +1,79 @@
+Playwright - advanced browser automation library backed by Microsoft
+Playwright has a property called Auto wait. By default playwright waits for 5 seconds before performing
+assertions and 30 seconds before locating WebElements, and if not successfull in above then it throws
+Timeout Error
+
+
+
+In playwright first we create instance of playwright -> browser instance -> page instance
+And then using page instnace you perform actions on Webpage
+
+Playwright playwright = Playwright.create();
+Browser browser = playwright.chromium().launch();
+Page page = browser.newPage();
+page.navigate();
+page.getByText("").fill()/click()/check();
+
+*** Locator startagies in Playwright: ***
+1. getByText
+2. getByLabel
+3. getByTitle
+4. getByAltText
+5. getByRole
+5. getByPlaceHolder
+6. getByTestId
+7. page.locator("#id"/".classname");
+
+
+*** Actions that can be performed on WebElements using Playwright ***
+1. send data - Locator.fill();
+2. check/uncheck - Locator.setChecked()/check();
+3. to verify checked state - Locator.ischecked();
+4. Select options to select multiple values from a dropdown
+Locator.selectOption("value"); / .selectOption(new String[] {"v1", "v2", "v4"});/
+Locator.slectOption(new SelectOption().setByIndex/setByValue/setByLabel);
+
+5. click on WebElement
+Locator.click()/ Locator.click(new ClickOptions.setButton(MouseButton.LEFT/RIGHT/MIDDLE));
+
+6. File Upload
+Locator.setInputFiles(Paths.get("pathname"));
+//to uplaod array of files
+ Locator.setInputFiles(new Path[]{Paths.get("pathname1"), Paths.get("pathname2") });
+
+7. Focus on WebElemen - Locator.focus();
+8. To drag and drop - Locator.dragTo(Locator);
+9. Scroll the page - Locator.scrollIntoViewIfNeeded();
+
+*** checks performed by Playwright  before executing any of the above action listed ***
+- Element is visible
+- Element is stable
+- Element recieves Events
+- Element is Enabled
+- Element is Editable
+
+*** Auto - Retrying assertions done by Playwright ***
+Assertion	Description
+assertThat(locator).isAttached()	Element is attached
+assertThat(locator).isChecked()	Checkbox is checked
+assertThat(locator).isDisabled()	Element is disabled
+assertThat(locator).isEditable()	Element is editable
+assertThat(locator).isEmpty()	Container is empty
+assertThat(locator).isEnabled()	Element is enabled
+assertThat(locator).isFocused()	Element is focused
+assertThat(locator).isHidden()	Element is not visible
+assertThat(locator).isInViewport()	Element intersects viewport
+assertThat(locator).isVisible()	Element is visible
+assertThat(locator).containsText()	Element contains text
+assertThat(locator).hasAttribute()	Element has a DOM attribute
+assertThat(locator).hasClass()	Element has a class property
+assertThat(locator).hasCount()	List has exact number of children
+assertThat(locator).hasCSS()	Element has CSS property
+assertThat(locator).hasId()	Element has an ID
+assertThat(locator).hasJSProperty()	Element has a JavaScript property
+assertThat(locator).hasText()	Element matches text
+assertThat(locator).hasValue()	Input has a value
+assertThat(locator).hasValues()	Select has options selected
+assertThat(page).hasTitle()	Page has a title
+assertThat(page).hasURL()	Page has a URL
+assertThat(response).isOK()	Response has an OK status

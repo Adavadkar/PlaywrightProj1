@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">13</td><td class="num">38,352</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">PageTests.HomePageTest</td><td><a href="#m0">TestCourseCount</a></td><td rowspan="1">1748193838498</td><td rowspan="1">30015</td></tr><tr class="failedeven"><td><a href="#m1">TestHomeFooter</a></td><td rowspan="1">1748193868513</td><td rowspan="1">16</td></tr><tr class="failedeven"><td><a href="#m2">TestHomePageTitle</a></td><td rowspan="1">1748193868529</td><td rowspan="1">0</td></tr><tr class="failedodd"><td rowspan="10">PageTests.SignUpPageTest</td><td><a href="#m3">TestEnterEmail</a></td><td rowspan="1">1748193872290</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m4">TestEnterName</a></td><td rowspan="1">1748193872290</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m5">TestEnterPassword</a></td><td rowspan="1">1748193872290</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m6">TestGenderSelection</a></td><td rowspan="1">1748193872290</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m7">TestHobbiesSelection</a></td><td rowspan="1">1748193872290</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m8">TestInterestSelection</a></td><td rowspan="1">1748193872305</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m9">TestInterestValuesCount</a></td><td rowspan="1">1748193872307</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m10">TestSignUpClick</a></td><td rowspan="1">1748193872307</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m11">TestSignUpTitle</a></td><td rowspan="1">1748193872307</td><td rowspan="1">0</td></tr><tr class="failedodd"><td><a href="#m12">TestStateSelection</a></td><td rowspan="1">1748193872307</td><td rowspan="1">0</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">PageTests.HomePageTest</td><td><a href="#m13">TestHomePageURL</a></td><td rowspan="1">1748193868529</td><td rowspan="1">3442</td></tr></tbody>
+</table>
+<h2>Surefire test</h2><h3 id="m0">PageTests.HomePageTest#TestCourseCount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\progress.js:75:26)
+    at Frame.waitForSelector (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\frames.js:629:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\dispatchers\frameDispatcher.js:105:103)
+    at FrameDispatcher._handleCommand (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for locator(&quot;//div[@class = &apos;course-card row&apos;]&quot;) to be visible
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1060)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1050)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$95(PageImpl.java:1590)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1589)
+	at com.microsoft.playwright.Page.waitForSelector(Page.java:8304)
+	at Pages.HomePage.verifyCourseCount(HomePage.java:24)
+	at PageTests.HomePageTest.TestCourseCount(HomePageTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\progress.js:75:26)
+    at Frame.waitForSelector (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\frames.js:629:23)
+    at FrameDispatcher.waitForSelector (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\dispatchers\frameDispatcher.js:105:103)
+    at FrameDispatcher._handleCommand (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\Aditi\AppData\Local\Temp\playwright-java-2392817393829042585\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for locator(&quot;//div[@class = &apos;course-card row&apos;]&quot;) to be visible
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 42 more
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">PageTests.HomePageTest#TestHomeFooter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [4] but found [0]
+	at PageTests.HomePageTest.TestHomeFooter(HomePageTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">PageTests.HomePageTest#TestHomePageTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Learn Automation Courses] but found []
+	at PageTests.HomePageTest.TestHomePageTitle(HomePageTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">PageTests.SignUpPageTest#TestEnterEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.getByPlaceholder(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyEmail(SignUpPage.java:26)
+	at PageTests.SignUpPageTest.TestEnterEmail(SignUpPageTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">PageTests.SignUpPageTest#TestEnterName</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.getByPlaceholder(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyName(SignUpPage.java:22)
+	at PageTests.SignUpPageTest.TestEnterName(SignUpPageTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">PageTests.SignUpPageTest#TestEnterPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.getByPlaceholder(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyEmail(SignUpPage.java:26)
+	at PageTests.SignUpPageTest.TestEnterPassword(SignUpPageTest.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">PageTests.SignUpPageTest#TestGenderSelection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyGenderSelection(SignUpPage.java:43)
+	at PageTests.SignUpPageTest.TestGenderSelection(SignUpPageTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">PageTests.SignUpPageTest#TestHobbiesSelection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyHobbiesSelection(SignUpPage.java:53)
+	at PageTests.SignUpPageTest.TestHobbiesSelection(SignUpPageTest.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">PageTests.SignUpPageTest#TestInterestSelection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyInterestSelection(SignUpPage.java:37)
+	at PageTests.SignUpPageTest.TestInterestSelection(SignUpPageTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">PageTests.SignUpPageTest#TestInterestValuesCount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyInterestsCount(SignUpPage.java:32)
+	at PageTests.SignUpPageTest.TestInterestValuesCount(SignUpPageTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">PageTests.SignUpPageTest#TestSignUpClick</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifySignUpButton(SignUpPage.java:56)
+	at PageTests.SignUpPageTest.TestSignUpClick(SignUpPageTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">PageTests.SignUpPageTest#TestSignUpTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.getByText(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifySignUpPageTitle(SignUpPage.java:19)
+	at PageTests.SignUpPageTest.TestSignUpTitle(SignUpPageTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">PageTests.SignUpPageTest#TestStateSelection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;this.page&quot; is null
+	at Pages.SignUpPage.verifyGenderSelection(SignUpPage.java:43)
+	at PageTests.SignUpPageTest.TestStateSelection(SignUpPageTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">PageTests.HomePageTest#TestHomePageURL</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

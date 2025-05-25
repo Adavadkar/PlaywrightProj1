@@ -1,0 +1,6 @@
+PageTests\SignUpPageTest.class
+Pages\LoginPage.class
+Pages\SignUpPage.class
+Pages\HomePage.class
+PageTests\HomePageTest.class
+PageTests\LoginPageTest.class

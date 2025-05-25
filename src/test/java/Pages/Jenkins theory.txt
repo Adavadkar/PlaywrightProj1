@@ -1,0 +1,3 @@
+Free Style Job in Jenkins
+Freestyle project in Jenkins can  be a typical build job or task. they can be simple running tests, building or packaging
+applications, sending a report, or even running some commands. 
